@@ -1,5 +1,4 @@
 import random
-import math
 from Cube import *
 
 window = create_window("Das ist ein Testfenster")
