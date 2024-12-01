@@ -43,4 +43,7 @@ void main()
             f_color += specular * pow(spec, shininess) * color;
     }
 
+    f_color = vec4(v_texture.x, v_texture.y, 0.0, 1.0);
+
+
 }
