@@ -1,15 +1,21 @@
 #version 330 core
+
+uniform sampler2D colorTexture;
+
+
 // input fragment data
 in vec4 v_position;
 in vec4 v_color;
 in vec3 v_normal;
 in vec4 cam_pos;
+in vec2 v_texture;
 
 // output fragment color
 out vec4 f_color;
 void main()
 {
-    vec4 color = v_color;
+    //vec4 color = v_color;
+    vec4 color = texture(colorTexture, v_texture);
 
 
     // set light constants (could also be passed from main program to shader)
